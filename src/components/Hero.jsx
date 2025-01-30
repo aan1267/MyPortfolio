@@ -7,6 +7,7 @@ import Skills from "./Skills";
 import ShinyEffect from "./ShinyEffect";
 import About from "./About";
 import Projects from "./Projects";
+import Contact from "./Contact"
 
 
 function Hero() {
@@ -91,6 +92,7 @@ function Hero() {
       <About />
       <Skills/>
       <Projects/>
+      <Contact/>
     </div>
   );
 }
