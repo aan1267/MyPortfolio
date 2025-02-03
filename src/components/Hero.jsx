@@ -1,7 +1,7 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import Aanchal from "../assests/my-images/Aanchal.jpg"
+import Aanchal from "../assets/my-images/Aanchal.jpg"
 import { ImGithub, ImLinkedin } from "react-icons/im";
 import Skills from "./Skills";
 import ShinyEffect from "./ShinyEffect";
@@ -11,7 +11,7 @@ import Contact from "./Contact"
 
 
 function Hero() {
-
+  console.log(window.location.pathname)
   return (
     <div className="mt-32 max-w-[1200px] px-6 mx-auto relative">
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 md:gap-8 lg:gap-16 sm:place-items-start md:place-items-start lg:place-items-center">
@@ -60,7 +60,7 @@ function Hero() {
                 scale: 1.05,
                 boxShadow: "0px 0px 8px rgba(0,0,0,0.3",
               }}
-              className="z-10 cursor-pointer font-bold text-gray-200 mt-2 md:w-auto p-5 border border-purple-400 rounded-xl text-xl"
+              className="z-10 cursor-pointer font-bold text-gray-200 mt-2 md:w-auto md:p-5 xs:p-3 border border-purple-400 rounded-xl md:text-xl xs:text-sm"
             >
               About me
             </motion.button>
