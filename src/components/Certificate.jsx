@@ -1,5 +1,5 @@
 import React from "react";
-import certificate from "../assests/certificate/certificate.png";
+import certificate from "../assets/certificate/certificate.png";
 import {learnings} from "../constants/index"
 
 function Certificate() {
