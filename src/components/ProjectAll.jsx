@@ -1,9 +1,16 @@
 import React from 'react'
 import { projects } from "../constants/index.js";
-
+import { motion } from "framer-motion";
 
 
 function ProjectAll() {
+
+  const Variants = {
+    hidden: { y: '-100%', opacity: 0 },  // Start above the screen
+    visible: { y: '0%', opacity: 1 },    // Slide to the original position
+  };
+
+  
   
   return (
     <>
@@ -21,13 +28,19 @@ function ProjectAll() {
           key={pro.id}
           className={`relative max-w-[355px] xs:max-w-[300px] md:max-w-[355px] group group-hover:opacity-50 w-full border border-[#1d293a] hover:border-[#464c6a] rounded-[10px]`}
         >
-             <div className="absolute inset-0 bg-black bg-opacity-75 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-300 ease-in-out">
+          {/* trigger styles on a child element when a parent element is hovered, use group and group-hover */}
+             <motion.div
+             initial="hidden"
+             animate="visible"
+             variants={Variants}
+             className="absolute inset-0 bg-black bg-opacity-75 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-300 ease-in-out"
+             >
                 <div className='max-w-[50px] '>
                 <a href="https://travstay-frontend-880v.onrender.com">
                 <img src="../public/img/play-video.svg" alt="..."/>
                 </a>
                 </div>
-            </div>
+              </motion.div>
           <div className="overflow-hidden h-[250px] object-cover w-auto  cursor-pointer">
             <img
               src={pro.image}
