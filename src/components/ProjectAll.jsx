@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 function ProjectAll() {
 
-  const Variants = {
-    hidden: { y: '-100%', opacity: 0 },  // Start above the screen
+  const SlideVariants = {
+    hidden: { y: '-50%', opacity: 0 },  // Start above the screen(if positive down the screen)
     visible: { y: '0%', opacity: 1 },    // Slide to the original position
   };
 
@@ -26,18 +26,19 @@ function ProjectAll() {
         <>
         <div
           key={pro.id}
-          className={`relative max-w-[355px] xs:max-w-[300px] md:max-w-[355px] group group-hover:opacity-50 w-full border border-[#1d293a] hover:border-[#464c6a] rounded-[10px]`}
+          className={`relative lg:max-w-[355px] xs:max-w-[300px] md:max-w-[355px] group group-hover:opacity-50 w-full border border-[#1d293a] hover:border-[#464c6a] rounded-[10px]`}
         >
           {/* trigger styles on a child element when a parent element is hovered, use group and group-hover */}
              <motion.div
-             initial="hidden"
-             animate="visible"
-             variants={Variants}
+              initial="hidden"  
+             animate="hidden"
+             whileHover="visible" // Trigger animation on hover
+             variants={SlideVariants}
              className="absolute inset-0 bg-black bg-opacity-75 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-300 ease-in-out"
              >
                 <div className='max-w-[50px] '>
                 <a href="https://travstay-frontend-880v.onrender.com">
-                <img src="../public/img/play-video.svg" alt="..."/>
+                <img src="../public/img/play-video.svg" alt="live-demo"/>
                 </a>
                 </div>
               </motion.div>
@@ -45,7 +46,7 @@ function ProjectAll() {
             <img
               src={pro.image}
               alt="..."
-              className="w-full h-full rounded-t-[10px]  rounded-t-[10px] group-hover:opacity-50 transition-opacity duration-300"
+              className="w-full h-full  rounded-t-[10px]  rounded-t-[10px] group-hover:opacity-50 transition-opacity duration-300"
             />
           </div>
           <div className="bg-slate-800 flex flex-col gap-y-4 p-3 lg:h-[300px] xs:h-[360px] rounded-b-[10px] text-white">
