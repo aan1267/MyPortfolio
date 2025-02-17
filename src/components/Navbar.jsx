@@ -72,12 +72,18 @@ function Navbar() {
           )
         }
 
-        <div onClick={toggleNav} className="md:hidden z-50  text-gray-200 cursor-pointer">
-          {open ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
-        </div>
+        {
+          pathname === "/" &&(
+            <div onClick={toggleNav} className="md:hidden z-50  text-gray-200 cursor-pointer">
+            {open ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
+          </div>
+          )}
+        
       </div>
 
-      <motion.div
+      {
+        pathname === "/" &&(
+        <motion.div
         initial={false}
         animate={open ? "open" : "closed"}
         variants={MenuVariants}
@@ -151,6 +157,7 @@ function Navbar() {
           </li>
         </ul> */}
       </motion.div>
+      )}
     </div>
   );
 }
