@@ -67,12 +67,12 @@ function Contact() {
     initial="initial"
     whileInView="animate"
     viewport={{ once: true }} 
-    className="flex lg:justify-between mt-[200px]  mb-8  md:flex-col flex-col lg:flex-row ">
+    className="flex lg:justify-between mt-[200px] md:flex-col flex-col lg:flex-row ">
      <h1 className="text-center my-16 text-white lg:w-[50%] w-full  lg:text-7xl md:text-xl xs:text-lg  xs:my-8  font-bold">Get in Touch<span className="text-purple-700"> Contact</span></h1>
       {alert && <div className="fixed top-[45px] left-0 w-full p-8">{alert}</div>}
       <motion.div 
        variants={variants} 
-      className="lg:w-[50%] w-full border-2 border-[#353a52] gap-8 p-4 text-white rounded-[20px]">
+      className="mb-10 lg:w-[50%] w-full border-2 border-[#353a52] gap-8 p-4 text-white rounded-[20px]">
       <form ref={formRef} onSubmit={sendEmail}>
           <div className="flex flex-col gap-2">
             <label htmlFor="name">Your Name:</label>
