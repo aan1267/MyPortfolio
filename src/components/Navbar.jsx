@@ -6,7 +6,7 @@ import { BsFillPersonLinesFill, BsLaptop, BsCalendar3 } from "react-icons/bs";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { FaRegMoon, FaSun } from "react-icons/fa";
 import { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
+import { ThemeContext } from "../context/ThemeProvider";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
