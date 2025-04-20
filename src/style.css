@@ -5,20 +5,13 @@
 
 body{
     font-family:"Space Grotesk", sans-serif;
-    background-color:#190b1f;
 }
 
 .green-pink-gradiant{
     background:linear-gradient(90.12deg,#00cea8 1.9%,#bf61ff 97.5%)
 }
 
-.shiny-effect{
-    position:absolute;
-    border-radius:50%;
-    pointer-events:none;
-    z-index:1;
-    background: radial-gradient(circle,rgba(202, 19, 202, 0.148),transparent 70%);
-}
+
 
 
 
