@@ -5,6 +5,12 @@ function About() {
   const [activesection, setActiveSection] = useState("");
   const [open, setOpen] = useState("");
 
+  const education = [
+    {qua:"MCA",year:"2025-2027",grades:""},
+    {qua:"BCA",year:"2022-2025",grades:"8 cgpa"},
+    {qua:"12th",year:"2021-2022",grades:"9.0 cgpa"},
+  ]
+
   const handleSection = (section) => {
     setActiveSection(section);
     setOpen(open === section ? "" : section);
@@ -88,26 +94,19 @@ function About() {
           </section>
           {activesection === "Education" && open === "Education" && (
             <div className="flex gap-4 flex-wrap">
-              <div
-                key={"Education"}
+              {
+                education.map(ed => (
+                  <div
                 className="text-white green-pink-gradiant mt-5 rounded-lg w-[250px] p-[1px]"
               >
                 <h1 className="md:text-lg xs:text-sm bg-[#110016] rounded-lg py-5 md:px-6 xs:px-2 h-[180px] xs:h-[90px] md:h-[150px]">
-                  <span className="text-green-300">2022-2025</span>
+                  <span className="text-green-300">{ed.year}</span>
                   <br />
-                  Bachelor Degree (BCA)
+                  {ed.qua} - {ed.grades}
                 </h1>
               </div>
-              <div
-                key={"skills"}
-                className="text-white green-pink-gradiant mt-5 rounded-lg w-[250px] p-[1px]"
-              >
-                <h1 className="md:text-lg xs:text-sm bg-[#110016] rounded-lg py-5 md:px-6 xs:px-2 h-[180px] xs:h-[90px] md:h-[150px]">
-                  <span className="text-green-300">2020-2022</span>
-                  <br />
-                  Higher Secondary(PCM)
-                </h1>
-              </div>
+                ))
+              }
             </div>
           )}
         </div>
@@ -119,8 +118,6 @@ function About() {
                 className="text-white green-pink-gradiant mt-5 rounded-lg w-[250px] p-[1px]"
               >
                 <h1 className="md:text-lg xs:text-sm  bg-[#110016] rounded-lg py-5 md:px-6 xs:px-2  md:h-[150px] xs:h-[90px]">
-                  <span className="text-green-300">2022-2025</span>
-                  <br />
                   Web Developer
                 </h1>
               </div>
