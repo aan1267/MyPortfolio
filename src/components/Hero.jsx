@@ -102,7 +102,7 @@ function Hero() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="mt-32 order-first  md:order-first lg:order-last  rounded-full w-[200px] md:w-[200px] sm:w-50 md:h-[450px]  lg:h-[550px] lg:w-[400px] border-4 border-solid border-pink-500 h-50 neon-border animate-neon"
+        className="mt-32 sm:mt-90   order-first md:order-first lg:order-last  rounded-full w-[200px] md:w-[200px] sm:w-50 md:h-[450px]  lg:h-[550px] lg:w-[400px] border-8 border-solid  border-pink-500 h-50"
       />
       <div className="absolute  hidden md:block"></div>
     </div>
