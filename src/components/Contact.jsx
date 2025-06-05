@@ -105,7 +105,7 @@ function Contact() {
           <div className="flex flex-col gap-2">
             <label htmlFor="">Your Message:</label>
             <textarea
-              className="bg-[#10172d] border-2 rounded-md border-[#353a52] px-3 py-2 mb-2 mb-4 focus:border-[#16f2b3]"
+              className="bg-[#10172d] border-2 rounded-md border-[#353a52] px-3 py-2 mb-2 focus:border-[#16f2b3]"
               placeholder="enter your message"
               name="message"
               rows={2}
