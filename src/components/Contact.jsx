@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Alert } from '@mui/material';
 import {motion} from "framer-motion"
+import ScrollTop from "./ScrollTop";
 
 function Contact() {
   const [form, setForm] = useState({
@@ -62,6 +63,7 @@ function Contact() {
       );
   };
   return (
+    <>
     <motion.div 
     variants={variants}
     initial="initial"
@@ -123,6 +125,8 @@ function Contact() {
       </form>
       </motion.div>
     </motion.div>
+    <ScrollTop/>
+    </>
   );
 }
 
