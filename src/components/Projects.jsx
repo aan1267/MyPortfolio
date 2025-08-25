@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import { projects } from "../constants/index.js";
 import { Link } from "react-router-dom";
-import { ThemeContext } from "../context/ThemeProvider.jsx";
+import { ThemeContext } from "../context/ThemeContext";
 
 const handleClick = () => {
   window.scrollTo(0, 0);

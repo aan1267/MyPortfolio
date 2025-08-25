@@ -6,7 +6,7 @@ import { BsFillPersonLinesFill, BsLaptop, BsCalendar3 } from "react-icons/bs";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { FaRegMoon, FaSun } from "react-icons/fa";
 import { useContext } from "react";
-import { ThemeContext } from "../context/ThemeProvider";
+import { ThemeContext } from "../context/ThemeContext";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -48,9 +48,9 @@ function Navbar() {
     <div
       className={`fixed top-0 left-0 w-full bg-opacity-70 backdrop-blur-md  z-50  ${
         theme === "dark" ? "bg-[#190b1f]" : "bg-gray-500"
-      }`}
-    >
-      <div className={`max-w-[1300px] flex justify-between items-center mx-auto lg:px-[90px] text-xl  px-6  h-20 ${theme == "light" ? "text-zinc-900" :"text-gray-200"}`}>
+      }`}>
+     
+      <div className="max-w-[1300px] flex justify-between items-center mx-auto text-xl  px-6  h-20  lg:px-[90px] text-white">
         <RouterLink
           to="/"
           className="md:text-2xl  sm:text-3xl text-xl cursor-pointer"
@@ -95,13 +95,13 @@ function Navbar() {
                 Certificate
               </RouterLink>
             </li>
-            <li>
+            {/* <li>
               <ScrollLink
                 to="experience"
               >
                 Experience
               </ScrollLink>
-            </li>
+            </li> */}
             <div onClick={handleLightDarkMode} className={`hover:rounded-full w-12 h-12 active:scale-95 flex items-center justify-center  ${theme == "light" ? "hover:bg-gray-200" : "hover:bg-zinc-400"}`}>
               {theme === "light" ? (
                 <FaRegMoon size={27} />
